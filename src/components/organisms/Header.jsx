@@ -37,11 +37,12 @@ const navigate = useNavigate();
     await logout();
   };
 
-  return (
-    <header className="sticky top-0 z-40 bg-surface border-b border-gray-200/80 backdrop-blur-sm">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+return (
+    <>
+      <header className="sticky top-0 z-40 bg-surface border-b border-gray-200/80 backdrop-blur-sm">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
             <div className="w-8 h-8 bg-gradient-to-r from-accent to-secondary rounded-lg flex items-center justify-center">
               <ApperIcon name="Clock" className="w-5 h-5 text-white" />
@@ -122,12 +123,12 @@ const navigate = useNavigate();
         </div>
       </header>
 
-      {/* Mobile Menu */}
+{/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <nav className="space-y-3">
-{navigationItems.map((item) => (
+              {navigationItems.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
@@ -137,7 +138,6 @@ const navigate = useNavigate();
                   {item.label}
                 </Link>
               ))}
-              
               {/* Mobile User Info & Logout */}
               {user && (
                 <div className="pt-4 border-t border-gray-100">
