@@ -154,8 +154,8 @@ return (
                     <ApperIcon name="LogOut" className="w-4 h-4" />
                     Logout
                   </button>
-                </div>
-              ))}
+</div>
+              )}
             </nav>
           </div>
         </div>
