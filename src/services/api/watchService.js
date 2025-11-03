@@ -380,5 +380,3 @@ class WatchService {
 }
 
 export default new WatchService();
-
-export default new WatchService();
