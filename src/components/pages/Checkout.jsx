@@ -102,7 +102,7 @@ const Checkout = () => {
     try {
       setLoading(true);
       
-      const orderData = {
+const orderData = {
         items: cartItems,
         totalAmount: total,
         shippingAddress: {
@@ -117,7 +117,7 @@ const Checkout = () => {
         },
         paymentMethod: formData.paymentMethod
       };
-
+      
       const order = await orderService.createOrder(orderData);
       clearCart();
       toast.success("Order placed successfully!");

@@ -11,7 +11,7 @@ export const useWatches = (initialFilters = {}) => {
     try {
       setLoading(true);
       setError(null);
-      const data = await watchService.getAll(filters);
+const data = await watchService.getAll(filters);
       setWatches(data);
     } catch (err) {
       setError(err.message);

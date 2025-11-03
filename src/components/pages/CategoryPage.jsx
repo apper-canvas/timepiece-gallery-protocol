@@ -14,7 +14,7 @@ const CategoryPage = ({ onAddToCart }) => {
   const [filters, setFilters] = useState({ categories: [category] });
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  const loadWatches = async () => {
+const loadWatches = async () => {
     try {
       setLoading(true);
       setError(null);

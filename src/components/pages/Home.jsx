@@ -12,7 +12,7 @@ const Home = ({ onAddToCart }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("all");
   
-  const { watches, loading, error, filters, updateFilters, clearFilters, retry } = useWatches();
+const { watches, loading, error, filters, updateFilters, clearFilters, retry } = useWatches();
   const { watches: featuredWatches, loading: featuredLoading } = useFeaturedWatches(4);
 
   const categories = [
@@ -23,7 +23,7 @@ const Home = ({ onAddToCart }) => {
     { id: "smartwatch", label: "Smartwatch", count: watches.filter(w => w.category === "smartwatch").length }
   ];
 
-  const handleCategoryFilter = (category) => {
+const handleCategoryFilter = (category) => {
     setActiveSection(category);
     if (category === "all") {
       updateFilters({ categories: [] });

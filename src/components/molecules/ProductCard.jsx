@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "@/components/atoms/Button";
-import Badge from "@/components/atoms/Badge";
 import ApperIcon from "@/components/ApperIcon";
+import Badge from "@/components/atoms/Badge";
+import Button from "@/components/atoms/Button";
 
 const ProductCard = ({ watch, onAddToCart, className }) => {
   const navigate = useNavigate();
@@ -23,11 +23,10 @@ const ProductCard = ({ watch, onAddToCart, className }) => {
       style={{ willChange: 'transform, box-shadow' }}
     >
       <div className="relative overflow-hidden">
-        <img
-          src={watch.images[0]}
+<img
+src={watch.images && watch.images.length > 0 ? watch.images[0] : ""}
           alt={`${watch.brand} ${watch.model}`}
-          className="w-full h-64 object-cover image-zoom"
-          style={{ willChange: 'transform' }}
+          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
         />
         
         {!watch.inStock && (

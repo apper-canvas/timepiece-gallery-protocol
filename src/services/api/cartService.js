@@ -25,7 +25,7 @@ class CartService {
   }
 
   // Add item to cart
-  addToCart(watch, quantity = 1) {
+addToCart(watch, quantity = 1) {
     const cartItems = this.getCartItems();
     const existingItem = cartItems.find(item => item.watchId === watch.Id);
 
@@ -37,7 +37,7 @@ class CartService {
         brand: watch.brand,
         model: watch.model,
         price: watch.price,
-        image: watch.images[0],
+        image: watch.images && watch.images.length > 0 ? watch.images[0] : "",
         quantity: quantity
       });
     }

@@ -16,7 +16,7 @@ const OrderConfirmation = () => {
 
   const orderNumber = location.state?.orderNumber;
 
-  useEffect(() => {
+useEffect(() => {
     const loadOrder = async () => {
       try {
         setLoading(true);

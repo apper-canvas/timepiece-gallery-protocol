@@ -19,8 +19,8 @@ const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const { watches: relatedWatches, loading: relatedLoading } = useRelatedWatches(id, 4);
 
   // Preload images to prevent blinking/flashing
-  useEffect(() => {
-    if (watch?.images) {
+useEffect(() => {
+    if (watch?.images && watch.images.length > 0) {
       watch.images.forEach(src => {
         const img = new Image();
         img.src = src;
